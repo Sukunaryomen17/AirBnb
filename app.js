@@ -3,10 +3,9 @@ require('dotenv').config();
 
 }
 
-
-
 const express=require("express");
 const app=express();
+const port=process.env.PORT || 8080;
 const mongoose=require("mongoose");
 
 const path=require("path");
@@ -109,6 +108,6 @@ app.use((err,req,res,next)=>{
 
 
 
-app.listen(8080,()=>{
+app.listen(port,()=>{
     console.log("Server is running");
 })
